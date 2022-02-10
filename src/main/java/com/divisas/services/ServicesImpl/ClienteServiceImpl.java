@@ -15,6 +15,7 @@ public class ClienteServiceImpl implements BaseService<Cliente> {
     private ClienteRepository clienteRepository;
 
     public ClienteServiceImpl( ClienteRepository clienteRepository){
+
         this.clienteRepository = clienteRepository;
     }
 
@@ -27,7 +28,6 @@ public class ClienteServiceImpl implements BaseService<Cliente> {
             return entities;
         }catch(Exception e){
             throw new Exception(e.getMessage());
-          //  return new ArrayList<>();
         }
     }
 
@@ -36,13 +36,9 @@ public class ClienteServiceImpl implements BaseService<Cliente> {
     public Cliente findById(Long id) throws Exception{
         try{
             Optional<Cliente> entityOptional = clienteRepository.findById(id);
-            //if(entityOptional.isPresent()){
                 return entityOptional.get();
-           // }
-         //   return null;
         }catch(Exception e){
             throw new Exception(e.getMessage());
-            //return new Cliente();
         }
     }
 
@@ -54,7 +50,6 @@ public class ClienteServiceImpl implements BaseService<Cliente> {
             return entity;
         }catch( Exception e){
             throw new Exception(e.getMessage());
-            //return new Cliente();
         }
     }
 
@@ -68,7 +63,6 @@ public class ClienteServiceImpl implements BaseService<Cliente> {
            return cliente;
         }catch(Exception e){
             throw new Exception(e.getMessage());
-            //return new Cliente();
         }
     }
 
@@ -84,7 +78,6 @@ public class ClienteServiceImpl implements BaseService<Cliente> {
             }
         }catch(Exception e){
             throw new Exception(e.getMessage());
-           // return false;
         }
     }
 }
