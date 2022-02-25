@@ -66,6 +66,7 @@ public class ClienteServiceImpl implements BaseService<Cliente> {
         }
     }
 
+
     @Override
     @Transactional
     public boolean delete(Long id) throws  Exception {

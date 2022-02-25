@@ -13,6 +13,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Date;
 
 
 @Getter
@@ -41,5 +42,5 @@ public class HistorialDivisa implements Serializable {
     private Double valorConversion;
 
     @Column( name = "fechaConversion")
-    private Instant fechaConversion;
+    private Date fechaConversion;
 }
